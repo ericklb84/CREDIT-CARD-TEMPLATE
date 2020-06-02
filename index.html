@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartao</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card-struc">
+            <div class="card-items">
+                <img src="./images/flags/visa.svg"  height="80px" alt="flag-card" class="flag">
+                <h3 class="card-number">0000 &nbsp; 0000 &nbsp; 0000 &nbsp; 0000</h3>
+                <h3 class="name">NOME COMPLETO</h3>
+                <h3 class="date">12/24</h3>
+            </div>
+        </div>
+        <div class="form">
+            <form action="" class="formulario">
+                <input type="text" class="card-number-form" maxlength="16" placeholder="card number">
+                <input type="text" class="holder-name-form" placeholder="holder name">
+                <input type="text" class="exp-date-form" maxlength="5" placeholder="EXP DATE">
+                <input type="text" class="cvv-form" maxlength="4" placeholder="CVV">
+                <button class="btn">SEND</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    $(document).ready(()=>{
+        $('.card-number-form').mask('0000 0000 0000 0000');
+        $('.exp-date-form').mask('00/00');
+    });
+</script>
+<script src="script.js"></script>
